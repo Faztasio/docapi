@@ -6,7 +6,7 @@ const glob = require("glob")
 const fs = require("fs")
 const path = require("path")
 
-const mdFiles = []
+var mdFiles = []
 
 glob("**/pages/*.md",function(er,files) {
   if (!er) {
@@ -17,3 +17,7 @@ glob("**/pages/*.md",function(er,files) {
     console.log((er.toString())
   }
 }
+
+var content = document.getElementById("content"),
+  sidebar = document.getElementById("sidenav")
+
