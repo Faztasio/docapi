@@ -2,9 +2,18 @@
 const markdown = require("./markdown.js")
 
 // Other modules
-const filestream = require("fs")
+const glob = require("glob")
+const fs = require("fs")
 const path = require("path")
 
-function bufferFile(relPath) {
-  return fs.readFileSync(path.join(__dirname, relPath)).toString(); // zzzz....
+const mdFiles = []
+
+glob("**/pages/*.md",function(er,files) {
+  if (!er) {
+    files.forEach(function(file) {
+      mdFiles.push(file)
+    }
+  } else {
+    console.log((er.toString())
+  }
 }
