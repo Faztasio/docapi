@@ -1,0 +1,2 @@
+# docapi
+Easy documentation maker.
